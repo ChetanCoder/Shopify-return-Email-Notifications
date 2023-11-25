@@ -1,0 +1,8 @@
+{% for p in line_item.properties %}
+{% unless p.last == blank %}
+<span class="order-list__item-variant">
+{{ p.first }}: {{ p.last | newline_to_br }}
+</span>
+<br>
+{% endunless %}
+{% endfor %}
